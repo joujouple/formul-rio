@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Formulário Escolar do Barenco</h1>
+                <p>Gestão de Alunos</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>Bem-vindo ao Sistema de Gestão Escolar</h2>
+                <p>Gerencie os dados dos alunos de forma simples e elegante</p>
+            </section>
+
+            <div class="grid-container">
+                <!-- Form Section -->
+                <aside class="form-section">
+                    <div class="card">
+                        <h3 id="form-title">Adicionar Novo Aluno</h3>
+                        <form id="student-form">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" placeholder="Ex: João Silva" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Ex: joao@school.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" placeholder="Ex: (11) 98765-4321" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="birthDate">Data de Nascimento</label>
+                                <input type="date" id="birthDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="turma">Turma</label>
+                                <input type="text" id="turma" placeholder="Ex: 1º A" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="curso">Curso</label>
+                                <select id="curso" required>
+                                    <option value="">Selecione um curso</option>
+                                    <option value="Front End">Front End</option>
+                                    <option value="Back End">Back End</option>
+                                    <option value="Full Stack">Full Stack</option>
+                                    <option value="Mobile">Mobile</option>
+                                    <option value="Data Science">Data Science</option>
+                                    <option value="DevOps">DevOps</option>
+                                </select>
+                            </div>
+
+                            <div class="button-group">
+                                <button type="submit" class="btn btn-primary">Adicionar</button>
+                                <button type="button" id="cancel-btn" class="btn btn-secondary" style="display: none;">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+
+                <!-- Students List Section -->
+                <section class="students-section">
+                    <div class="section-header">
+                        <h3>Alunos Cadastrados (<span id="total-students">0</span>)</h3>
+                        <p>Visualize, edite ou remova informações dos alunos</p>
+                    </div>
+
+                    <!-- Barra de Pesquisa -->
+                    <div class="search-container">
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            class="search-input" 
+                            placeholder="🔍 Pesquisar por nome ou email..."
+                        >
+                        <button id="clear-search-btn" class="btn-clear-search" style="display: none;">✕</button>
+                    </div>
+
+                    <div id="students-grid" class="students-grid">
+                        <!-- Cards de alunos serão inseridos aqui -->
+                    </div>
+
+                    <!-- Mensagem quando nenhum aluno é encontrado -->
+                    <div id="no-results" class="no-results" style="display: none;">
+                        <p>Nenhum aluno encontrado com essa pesquisa.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre</h4>
+                    <p>Sistema de gestão escolar moderno para gerenciar dados de alunos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Email: contato@escolamoderna.com</p>
+                    <p>Telefone: (11) 3000-0000</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horário</h4>
+                    <p>Segunda a Sexta: 8h - 18h</p>
+                    <p>Sábado: 9h - 13h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Formulário Escolar. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
